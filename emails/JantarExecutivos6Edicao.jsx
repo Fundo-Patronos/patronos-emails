@@ -32,7 +32,7 @@ export default function JantarExecutivos6Edicao() {
           {/* Header Image */}
           <Section className="mb-[32px]">
             <Img
-              src="https://raw.githubusercontent.com/YOUR_USERNAME/5.patronos-emails/main/public/images/Generic%20Email%20Header%20-%20Cover%20Image%20(600%20x%20200%20px).svg"
+              src="https://raw.githubusercontent.com/Fundo-Patronos/patronos-emails/main/public/images/Generic%20Email%20Header%20-%20Cover%20Image%20(600%20x%20200%20px).svg"
               alt="6ª Edição do Jantar de Executivos - Fundo Patronos"
               width="536"
               style={{
@@ -42,10 +42,6 @@ export default function JantarExecutivos6Edicao() {
                 display: 'block',
               }}
             />
-            {/*
-              Nota: Substitua YOUR_USERNAME pelo seu username do GitHub
-              Ou hospede em: https://patronos.org/email-assets/images/hero-jantar-executivos.jpg
-            */}
           </Section>
 
           {/* Título do Evento */}
