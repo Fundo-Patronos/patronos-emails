@@ -1,13 +1,22 @@
 {
-  "name": "5.patronos-emails",
+  "name": "patronos-emails",
   "version": "1.0.0",
-  "description": "",
+  "description": "Email service for Fundo Patrimonial Patronos using React.email and Resend",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "email dev",
+    "export": "email export",
+    "send": "node src/utils/sendEmail.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "email",
+    "react-email",
+    "resend",
+    "patronos",
+    "unicamp"
+  ],
+  "author": "Associação Fundo Patrimonial Patronos",
   "license": "ISC",
   "dependencies": {
     "@react-email/components": "^0.5.7",
