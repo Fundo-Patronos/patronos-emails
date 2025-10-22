@@ -18,14 +18,14 @@ import {
 } from '../src/components';
 
 /**
- * 6ª Edição do Jantar de Executivos - Email de Confirmação
- * Email de agradecimento e lembrete para participantes confirmados
+ * 6ª Edição do Jantar de Executivos - Email de Agradecimento
+ * Email pós-evento agradecendo pela presença e recapitulando novidades
  */
 export default function JantarExecutivos6Edicao() {
   return (
     <Html>
       <Head />
-      <Preview>Hoje é o dia! 6ª Edição do Jantar de Executivos - Fundo Patronos</Preview>
+      <Preview>Obrigado por uma noite inesquecível! 6ª Edição do Jantar de Executivos</Preview>
       <Body style={{ backgroundColor: brand.colors.background.light, fontFamily: brand.typography.fontFamily.primary }}>
         <Container className="mx-auto max-w-[600px] rounded-[8px] bg-white p-[32px] my-[40px]">
 
@@ -50,20 +50,20 @@ export default function JantarExecutivos6Edicao() {
               className="m-0 font-semibold text-[14px] leading-[20px]"
               style={{ color: brand.colors.gradient.stops.orange, textTransform: 'uppercase', letterSpacing: '1px' }}
             >
-              Hoje é o dia
+              Muito obrigado!
             </Text>
             <Heading
               as="h1"
               className="m-0 mt-[12px] font-bold text-[32px] leading-[40px]"
               style={{ color: brand.colors.text.primary }}
             >
-              6ª Edição do Jantar de Executivos
+              Uma Noite Inesquecível
             </Heading>
             <Text
               className="m-0 mt-[8px] text-[16px] leading-[24px]"
               style={{ color: brand.colors.text.secondary }}
             >
-              Uma noite dedicada ao futuro da Unicamp
+              6ª Edição do Jantar de Executivos
             </Text>
           </Section>
 
@@ -73,29 +73,29 @@ export default function JantarExecutivos6Edicao() {
               as="h2"
               className="m-0 font-semibold text-[24px] text-gray-900 leading-[32px]"
             >
-              Muito obrigado por confirmar sua presença!
+              Obrigado por fazer parte desta noite especial!
             </Heading>
             <Text className="mt-[16px] mb-0 text-[16px] text-gray-600 leading-[28px]">
-              É com grande alegria que recebemos você nesta noite especial. O Jantar de Executivos é um momento único de conexão entre líderes empresariais, alumni e amigos da Unicamp, todos unidos pelo propósito de transformar a educação superior no Brasil.
+              Foi com imensa alegria que recebemos você na noite de 22 de outubro na Sociedad Gastronomica, em São Paulo. O jantar preparado pelo Chef Julian Rigo, a companhia de líderes inspiradores e o ambiente acolhedor tornaram esta sexta edição verdadeiramente memorável.
             </Text>
             <Text className="mt-[16px] mb-0 text-[16px] text-gray-600 leading-[28px]">
-              Preparamos uma noite memorável com novidades importantes que marcarão o futuro do Fundo Patrimonial Patronos e do apoio aos estudantes da Unicamp.
+              Momentos como este reforçam nossa convicção de que, juntos, somos capazes de transformar a educação superior no Brasil. Cada conversa, cada conexão e cada contribuição fortalecem nosso compromisso coletivo com a excelência e a perenidade da Unicamp.
             </Text>
           </Section>
 
           <Hr className="border-gray-200 my-[32px]" />
 
-          {/* Novidades que Serão Apresentadas */}
+          {/* Novidades Apresentadas */}
           <Section className="mb-[32px]">
             <Heading
               as="h2"
               className="m-0 mb-[16px] font-semibold text-[20px] leading-[28px]"
               style={{ color: brand.colors.gradient.stops.orange }}
             >
-              Novidades que Apresentaremos Hoje
+              Novidades Apresentadas no Jantar
             </Heading>
             <Text className="mt-[8px] mb-[24px] text-[16px] text-gray-600 leading-[28px]">
-              Estamos animados para compartilhar quatro iniciativas transformadoras que consolidam nosso compromisso com a excelência e transparência:
+              Durante o evento, tivemos a honra de compartilhar quatro iniciativas transformadoras que consolidam nosso compromisso com a excelência e transparência. Recapitulamos abaixo para que você possa revisitar e compartilhar:
             </Text>
 
             <FeatureList
@@ -124,23 +124,19 @@ export default function JantarExecutivos6Edicao() {
 
           <Hr className="border-gray-200 my-[32px]" />
 
-          {/* Informações Práticas */}
+          {/* Gratidão e Impacto */}
           <Section className="mb-[32px]">
             <Heading
               as="h3"
-              className="m-0 mb-[16px] font-semibold text-[18px] text-gray-900 leading-[28px]"
+              className="m-0 mb-[16px] font-semibold text-[20px] text-gray-900 leading-[28px]"
             >
-              Informações Importantes
+              Seu Apoio Transforma Vidas
             </Heading>
             <Text className="m-0 text-[16px] text-gray-600 leading-[28px]">
-              <strong style={{ color: brand.colors.text.primary }}>Horário:</strong> Consulte seu convite individual
-              <br />
-              <strong style={{ color: brand.colors.text.primary }}>Dress code:</strong> Traje executivo
-              <br />
-              <strong style={{ color: brand.colors.text.primary }}>Confirmação:</strong> Sua presença está confirmada
+              Graças à sua generosa contribuição e ao apoio de cada participante, seguimos fortalecendo o Fundo Patrimonial Patronos. Com mais de 2 mil alunos já apoiados e editais que ampliam o acesso à educação, cada doação se traduz em oportunidades reais de transformação.
             </Text>
-            <Text className="mt-[16px] mb-0 text-[14px] text-gray-500 leading-[24px]">
-              Em caso de imprevistos de última hora, por favor, entre em contato conosco o quanto antes.
+            <Text className="mt-[16px] mb-0 text-[16px] text-gray-600 leading-[28px]">
+              Que esta noite seja apenas o início de uma jornada ainda mais impactante juntos. Continuamos contando com você para construir o futuro da Unicamp.
             </Text>
           </Section>
 
@@ -165,21 +161,21 @@ export default function JantarExecutivos6Edicao() {
             </div>
           </Section>
 
+          {/* Mensagem Final e Próximos Passos */}
+          <Section className="mb-[32px]">
+            <Text className="text-center text-[16px] text-gray-600 leading-[28px]">
+              Fique atento às próximas novidades e eventos do Fundo Patronos. Juntos, continuaremos transformando a educação superior no Brasil e inspirando a próxima geração de líderes.
+            </Text>
+            <Text className="text-center text-[16px] font-semibold text-gray-900 leading-[28px] mt-[16px]">
+              Juntos, somos melhores!
+            </Text>
+          </Section>
+
           {/* Call to Action */}
           <Section className="text-center mb-[32px]">
             <Button href={brand.links.website.home} variant="secondary">
               Conheça Mais Sobre o Fundo Patronos
             </Button>
-          </Section>
-
-          {/* Mensagem Final */}
-          <Section className="mb-[32px]">
-            <Text className="text-center text-[16px] text-gray-600 leading-[28px] italic">
-              Estamos ansiosos para recebê-lo e compartilhar esta noite especial dedicada ao futuro da educação na Unicamp.
-            </Text>
-            <Text className="text-center text-[16px] font-semibold text-gray-900 leading-[28px] mt-[16px]">
-              Até hoje à noite!
-            </Text>
           </Section>
 
           {/* Footer */}
