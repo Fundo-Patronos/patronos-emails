@@ -49,14 +49,15 @@ export default function JantarExecutivos6Edicao() {
           <Section className="mb-[32px]">
             <Heading
               as="h2"
-              className="m-0 font-semibold text-[24px] text-gray-900 leading-[32px]"
+              className="m-0 font-semibold text-[24px] leading-[32px]"
+              style={{ color: brand.colors.gradient.stops.orange }}
             >
               Obrigado por fazer parte desta noite especial!
             </Heading>
-            <Text className="mt-[16px] mb-0 text-[16px] text-gray-600 leading-[28px]">
+            <Text style={{ marginTop: '16px', marginBottom: '0', fontSize: '16px', color: brand.colors.text.secondary, lineHeight: '28px' }}>
               Foi com imensa alegria que recebemos você nesta noite especial. A companhia de líderes inspiradores e o ambiente acolhedor tornaram esta sexta edição verdadeiramente memorável.
             </Text>
-            <Text className="mt-[16px] mb-0 text-[16px] text-gray-600 leading-[28px]">
+            <Text style={{ marginTop: '16px', marginBottom: '0', fontSize: '16px', color: brand.colors.text.secondary, lineHeight: '28px' }}>
               Momentos como este reforçam nossa convicção de que, juntos, somos capazes de transformar a educação superior no Brasil. Cada conversa, cada conexão e cada contribuição fortalecem nosso compromisso coletivo com a excelência e a perenidade da Unicamp.
             </Text>
           </Section>
@@ -72,7 +73,7 @@ export default function JantarExecutivos6Edicao() {
             >
               Relatório Anual 2024
             </Heading>
-            <Text className="m-0 mb-[16px] text-[15px] text-gray-600 leading-[24px] text-center">
+            <Text style={{ margin: '0 0 16px 0', fontSize: '16px', color: brand.colors.text.primary, lineHeight: '28px', textAlign: 'left' }}>
               Conheça os resultados do nosso trabalho em 2024 e o impacto que geramos juntos para a Unicamp.
             </Text>
             <div style={{ textAlign: 'center' }}>
@@ -96,7 +97,7 @@ export default function JantarExecutivos6Edicao() {
             >
               Novidades Apresentadas no Jantar
             </Heading>
-            <Text className="mt-[8px] mb-[24px] text-[16px] text-gray-600 leading-[28px]">
+            <Text style={{ marginTop: '8px', marginBottom: '24px', fontSize: '16px', color: brand.colors.text.secondary, lineHeight: '28px' }}>
               Durante o evento, tivemos a honra de compartilhar quatro iniciativas transformadoras que consolidam nosso compromisso com a excelência e transparência. Recapitulamos abaixo para que você possa revisitar e compartilhar:
             </Text>
 
@@ -135,16 +136,16 @@ export default function JantarExecutivos6Edicao() {
             >
               Seu Apoio Transforma Vidas
             </Heading>
-            <Text className="m-0 text-[16px] text-gray-600 leading-[28px]">
+            <Text style={{ margin: '0', fontSize: '16px', color: brand.colors.text.secondary, lineHeight: '28px' }}>
               Graças à sua generosa contribuição e ao apoio de cada participante, seguimos fortalecendo o Fundo Patrimonial Patronos. Com mais de 2 mil alunos já apoiados e editais que ampliam o acesso à educação, cada doação se traduz em oportunidades reais de transformação.
             </Text>
-            <Text className="mt-[16px] mb-0 text-[16px] text-gray-600 leading-[28px]">
+            <Text style={{ marginTop: '16px', marginBottom: '0', fontSize: '16px', color: brand.colors.text.secondary, lineHeight: '28px' }}>
               Que esta noite seja apenas o início de uma jornada ainda mais impactante juntos. Continuamos contando com você para construir o futuro da Unicamp.
             </Text>
           </Section>
 
           {/* CTA - Contribuir Agora */}
-          <Section className="text-center mb-[32px]">
+          <Section style={{ textAlign: 'center', marginTop: '48px', marginBottom: '48px' }}>
             <Button href="https://doa.re/patronos" variant="primary">
               Contribuir Agora
             </Button>
@@ -152,10 +153,10 @@ export default function JantarExecutivos6Edicao() {
 
           {/* Mensagem Final e Próximos Passos */}
           <Section className="mb-[32px]">
-            <Text className="text-center text-[16px] text-gray-600 leading-[28px]">
+            <Text style={{ textAlign: 'center', fontSize: '16px', color: brand.colors.text.secondary, lineHeight: '28px' }}>
               Fique atento às próximas novidades e eventos do Fundo Patronos. Juntos, continuaremos transformando a educação superior no Brasil e inspirando a próxima geração de líderes.
             </Text>
-            <Text className="text-center text-[16px] font-semibold text-gray-900 leading-[28px] mt-[16px]">
+            <Text style={{ textAlign: 'center', fontSize: '16px', fontWeight: '600', color: brand.colors.text.secondary, lineHeight: '28px', marginTop: '16px' }}>
               Juntos, somos melhores!
             </Text>
           </Section>
@@ -165,7 +166,7 @@ export default function JantarExecutivos6Edicao() {
 
           {/* Social Media Links */}
           <Section className="mb-[24px]">
-            <Text className="text-center text-[14px] text-gray-600 leading-[24px] mb-[12px]">
+            <Text style={{ textAlign: 'center', fontSize: '16px', color: brand.colors.text.secondary, lineHeight: '28px', marginBottom: '12px' }}>
               Acompanhe o Fundo Patronos
             </Text>
             <table width="100%" cellPadding="0" cellSpacing="0" style={{ margin: '0 auto' }}>
@@ -223,7 +224,7 @@ export default function JantarExecutivos6Edicao() {
             <Text className="text-center text-[14px] text-gray-500 leading-[24px] mb-[8px]">
               <strong style={{ color: brand.colors.text.primary }}>Fundo Patrimonial Patronos</strong>
               <br />
-              Transformando a Unicamp por meio de doações
+              Acelerando a missão acadêmica da Unicamp
             </Text>
             <Text className="text-center text-[12px] text-gray-400 leading-[20px]">
               {brand.organization.legalName} - CNPJ: {brand.organization.cnpj}

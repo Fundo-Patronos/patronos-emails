@@ -69,7 +69,7 @@ export const FeatureList = ({
                       margin: '2px 0 0 0',
                       fontSize: '20px',
                       fontWeight: '600',
-                      color: colors.text.primary,
+                      color: colors.gradient.stops.orange,
                       lineHeight: '28px',
                     }}
                   >
@@ -80,7 +80,7 @@ export const FeatureList = ({
                       margin: '8px 0 0 0',
                       fontSize: '16px',
                       color: colors.text.secondary,
-                      lineHeight: '26px',
+                      lineHeight: '28px',
                     }}
                   >
                     {feature.description}
