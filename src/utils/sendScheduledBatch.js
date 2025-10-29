@@ -17,42 +17,37 @@ const recipients = [
   'danielmendoncabarros@gmail.com',
   'ecrolim@gmail.com',
   'erica.jannini@gmail.com',
-  'feistler@gmail.com',
   'gabriel.neves@patronos.org',
   'grrolim@gmail.com',
   'hbiscolla@alvarezandmarsal.com',
   'hrmascarenhas@uol.com.br',
-  'igor@pier.digital',
-  'jonesshu@gmail.com',
   'julia.monteiro@patronos.org',
-  'leonidas_eduardo@yahoo.com',
   'lucas.yuhara@patronos.org',
   'mhiran@galapagoscapital.com',
   'micaram@gmail.com',
   'pedro.mota@nubank.com.br',
   'pedro.mota@patronos.org',
-  'rdtiezzi@gmail.com',
   'rodrigo.ferroni@gmail.com',
   'sabrinasutto@hotmail.com',
   'tulio.prado@patronos.org',
 ];
 
-// Calculate scheduled time: Today at 10:30 PM São Paulo time
+// Calculate scheduled time: Today at 7:00 PM Brasilia time
 function getScheduledTime() {
   const now = new Date();
 
-  // Create date for today at 10:30 PM in São Paulo timezone (UTC-3)
+  // Create date for today at 7:00 PM in Brasilia timezone (UTC-3)
   const scheduledDate = new Date(now);
 
-  // Set to 10:30 PM São Paulo time
-  // São Paulo is typically UTC-3 (BRT/BRST)
+  // Set to 7:00 PM Brasilia time
+  // Brasilia is typically UTC-3 (BRT/BRST)
   const saoPauloOffset = -3; // UTC-3
   const localOffset = scheduledDate.getTimezoneOffset() / 60; // Local offset in hours
 
-  scheduledDate.setHours(22, 30, 0, 0); // 10:30 PM local
+  scheduledDate.setHours(19, 0, 0, 0); // 7:00 PM local
 
   // Adjust for timezone difference if needed
-  // For now, assuming you're running this from São Paulo
+  // For now, assuming you're running this from Brasilia
 
   console.log('📅 Scheduled for:', scheduledDate.toLocaleString('pt-BR', {
     timeZone: 'America/Sao_Paulo',
@@ -72,7 +67,7 @@ async function sendScheduledBatch() {
     console.log('📧 Preparing to schedule batch email send...\n');
 
     // Read the exported HTML file
-    const emailHtmlPath = join(__dirname, '../../out/JantarExecutivos6Edicao.html');
+    const emailHtmlPath = join(__dirname, '../../out/InstrucoesDoacao.html');
     const emailHtml = readFileSync(emailHtmlPath, 'utf-8');
 
     console.log('✅ Email HTML loaded successfully');
@@ -99,7 +94,7 @@ async function sendScheduledBatch() {
           to: [recipient],
           cc: ['gustavo.beltrami@patronos.org'],
           replyTo: 'gustavo.beltrami@patronos.org',
-          subject: '6ª Edição do Jantar de Executivos - Obrigado!',
+          subject: 'Fundo Patronos - Como fazer sua contribuição',
           html: emailHtml,
           scheduledAt: scheduledAt,
         });

@@ -561,3 +561,122 @@ Production send scheduled for all attendees:
 ---
 
 **Session End**: Email successfully refined with professional styling, all paragraphs standardized, and production deployment completed. 24 individual emails scheduled for 10:30 PM São Paulo time with 100% success rate. Email is production-ready and queued in Resend.
+
+---
+
+## Session 4 - October 29, 2025: Donation Instructions Email & Production Deployment
+
+### Accomplished
+
+#### 1. New Email Template: Instruções de Doação
+- ✅ Created new email template: `emails/InstrucoesDoacao.jsx`
+- ✅ Content: How and why to contribute to Fundo Patronos
+- ✅ Sections included:
+  - Hero banner (same as Jantar email)
+  - "Por que contribuir" with 6 reasons in 2x3 grid with gradient checkmarks
+  - "Como Contribuir" section with PIX and recurring donation instructions
+  - PIX email highlighted: operacoes@patronos.org (non-clickable)
+  - Relatório Anual 2024 tile
+  - Final message and footer
+
+#### 2. Email Design Iterations & Fixes
+- ✅ **Font colors**: Changed 6 reasons from primary to secondary grey (#6B7280)
+- ✅ **Removed section**: "Conheça o Fundo Patronos" section removed per user request
+- ✅ **Reordered content**: Moved Relatório Anual after impact paragraph
+- ✅ **Fixed circles**: Converted flex-based layout to table-based for perfect circles in email clients
+- ✅ **White background**: Changed from light grey to #ffffff for dark mode compatibility
+- ✅ **Font consistency**: Removed fontWeight: 500, changed lineHeight from 24px to 28px to match all paragraphs
+- ✅ **PIX email**: Changed from Text to div/span to prevent auto-linking
+
+#### 3. Recipient List Management
+- ✅ Updated recipient list from 24 to 19 people
+- ✅ Removed: Felipe Feistler, Ricardo Tiezzi, Eduardo Leonidas, Igor, Jones Shu
+- ✅ Kept: Daniel Azevedo (added back per user request)
+- ✅ Final list: 19 recipients
+
+#### 4. Email Subject & Configuration
+- ✅ Subject line: "Fundo Patronos - Como fazer sua contribuição"
+- ✅ Updated both scripts:
+  - `src/utils/sendScheduledBatch.js` - Batch sending
+  - `src/utils/sendFromExport.js` - Test emails
+- ✅ Changed email template from JantarExecutivos to InstrucoesDoacao
+
+#### 5. Production Deployment
+- ✅ Scheduled batch send: 19 emails for 7:00 PM Brasilia time (October 29, 2025)
+- ✅ Individual email delivery (privacy-compliant)
+- ✅ Success rate: 19/19 (100%)
+- ✅ Email size: 14.94 KB
+
+### Email Structure (Final)
+```
+1. Hero Image (PNG, 30KB)
+2. "Por que contribuir com o Fundo Patronos" (h2, orange)
+3. 6 reasons in 2x3 grid (perfect circles with checkmarks)
+---
+4. "Como Contribuir" (h2, orange)
+5. PIX section (grey box with non-clickable email)
+6. Recurring donations section (grey box with CTA button)
+---
+7. Impact paragraph
+---
+8. Relatório Anual 2024 (grey box, left-aligned text)
+---
+9. "Juntos, somos melhores!" (semibold)
+---
+10. Social Media Links (Instagram • LinkedIn • Website)
+11. Footer (Organization info, CNPJ, links)
+```
+
+### Technical Learnings
+- **Email client compatibility**: Flexbox doesn't work reliably - use table-based layouts for icons/circles
+- **Dark mode support**: Use solid white (#ffffff) background instead of light grey
+- **Typography consistency**: All paragraphs must have same fontSize (16px), color (#6B7280), and lineHeight (28px)
+- **Link prevention**: Use div/span instead of Text component to prevent email auto-linking
+- **Batch scheduling**: Resend API returns undefined ID for scheduled sends (normal behavior)
+
+### Files Created/Modified
+
+**New Files:**
+- `emails/InstrucoesDoacao.jsx` - Donation instructions email template
+
+**Modified Files:**
+- `src/utils/sendScheduledBatch.js` - Updated recipient list (19), subject line, scheduled time (7pm), template (InstrucoesDoacao)
+- `src/utils/sendFromExport.js` - Updated subject line and template
+- `emails/InstrucoesDoacao.jsx` - Multiple iterations for styling and content
+
+### Production Status
+
+**✅ Email Deployed**: 19 emails successfully scheduled for 7:00 PM Brasilia time (October 29, 2025)
+
+**Email Configuration:**
+- From: Fundo Patronos <contato@patronos.org>
+- Reply-to: gustavo.beltrami@patronos.org
+- CC: gustavo.beltrami@patronos.org
+- Subject: Fundo Patronos - Como fazer sua contribuição
+- Format: Individual sends (privacy-compliant)
+- Size: 14.94 KB HTML
+
+**Recipient List (19):**
+- agnesbq@icloud.com
+- andrebosque@hotmail.com
+- aristotelesnf@gmail.com
+- danielmendoncabarros@gmail.com
+- ecrolim@gmail.com
+- erica.jannini@gmail.com
+- gabriel.neves@patronos.org
+- grrolim@gmail.com
+- hbiscolla@alvarezandmarsal.com
+- hrmascarenhas@uol.com.br
+- julia.monteiro@patronos.org
+- lucas.yuhara@patronos.org
+- mhiran@galapagoscapital.com
+- micaram@gmail.com
+- pedro.mota@nubank.com.br
+- pedro.mota@patronos.org
+- rodrigo.ferroni@gmail.com
+- sabrinasutto@hotmail.com
+- tulio.prado@patronos.org
+
+---
+
+**Session End**: Donation instructions email completed, tested, and scheduled for production deployment. Second email template successfully delivered to 19 recipients with 100% scheduling success rate.

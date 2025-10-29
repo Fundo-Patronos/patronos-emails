@@ -14,7 +14,7 @@ async function sendTestEmail() {
     console.log('📧 Preparing to send test email...\n');
 
     // Read the exported HTML file
-    const emailHtmlPath = join(__dirname, '../../out/JantarExecutivos6Edicao.html');
+    const emailHtmlPath = join(__dirname, '../../out/InstrucoesDoacao.html');
     const emailHtml = readFileSync(emailHtmlPath, 'utf-8');
 
     console.log('✅ Email HTML loaded successfully');
@@ -24,9 +24,8 @@ async function sendTestEmail() {
     const data = await resend.emails.send({
       from: 'Fundo Patronos <contato@patronos.org>',
       to: ['gustavo.beltrami@patronos.org'],
-      cc: ['gustavo.beltrami@patronos.org'],
       replyTo: 'gustavo.beltrami@patronos.org',
-      subject: '6ª Edição do Jantar de Executivos - Obrigado!',
+      subject: 'Fundo Patronos - Como fazer sua contribuição',
       html: emailHtml,
     });
 
@@ -35,9 +34,8 @@ async function sendTestEmail() {
     console.log('\n📋 Email details:');
     console.log('  From: Fundo Patronos <contato@patronos.org>');
     console.log('  To: gustavo.beltrami@patronos.org');
-    console.log('  CC: gustavo.beltrami@patronos.org');
     console.log('  Reply-to: gustavo.beltrami@patronos.org');
-    console.log('  Subject: 6ª Edição do Jantar de Executivos - Obrigado!');
+    console.log('  Subject: Fundo Patronos - Como fazer sua contribuição');
 
     return data;
   } catch (error) {
