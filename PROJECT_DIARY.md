@@ -680,3 +680,100 @@ Production send scheduled for all attendees:
 ---
 
 **Session End**: Donation instructions email completed, tested, and scheduled for production deployment. Second email template successfully delivered to 19 recipients with 100% scheduling success rate.
+
+---
+
+## Session 5 - February 9-10, 2026: Voz do Doador Survey Campaign
+
+### Accomplished
+
+#### 1. New Email Template: Voz do Doador 2026
+- ✅ Created main survey email template: `emails/VozDoDoador.jsx`
+- ✅ Purpose: Annual donor satisfaction survey
+- ✅ Content: Invitation to participate in "Pesquisa Voz do Doador 2026"
+- ✅ CTA: Link to Tally survey form
+- ✅ Template size: 9.40 KB
+
+#### 2. Reminder Email Template
+- ✅ Created reminder template: `emails/VozDoDoadorLembrete.jsx`
+- ✅ Shorter, more direct messaging for follow-up reminders
+- ✅ Designed for 4-reminder sequence
+
+#### 3. Mass Email Campaign Deployment
+- ✅ **Initial send (Feb 9, 2026)**: 204 donors
+- ✅ **Pending send (Feb 10, 2026)**: 12 donors
+- ✅ **Total recipients**: 216 donors from Patronos donor base
+- ✅ Source: `Patronos_Base_Email_Doadores_2026.csv`
+
+#### 4. Utility Scripts Created
+- ✅ `src/utils/sendVozDoDoador.js` - Main campaign send script
+- ✅ `src/utils/sendPending12.js` - Script for 12 pending recipients
+- ✅ `src/utils/scheduleReminders.js` - Automated reminder scheduling
+- ✅ `pending_emails_12.json` - List of 12 pending email addresses
+
+### Email Configuration
+
+**Main Campaign:**
+- From: Fundo Patronos <contato@patronos.org>
+- To: contato@patronos.org (main recipient)
+- CC: gustavo.beltrami@patronos.org, lucas.yuhara@patronos.org
+- BCC: 216 donors (privacy-compliant mass send)
+- Reply-to: gustavo.beltrami@patronos.org
+- Subject: Fundo Patronos - Pesquisa Voz do Doador 2026 - Queremos ouvir você!
+
+### Campaign Schedule
+
+| Data  | Ação              | Status       | Destinatários |
+|-------|-------------------|--------------|---------------|
+| 09/02 | Envio inicial     | ✅ Enviado   | 204 doadores  |
+| 10/02 | 12 pendentes      | ✅ Enviado   | 12 doadores   |
+| 14/02 | Lembrete 1        | ⏳ Pendente  | 216 doadores  |
+| 19/02 | Lembrete 2        | ⏳ Pendente  | 216 doadores  |
+| 24/02 | Lembrete 3        | ⏳ Pendente  | 216 doadores  |
+| 01/03 | Lembrete 4        | ⏳ Pendente  | 216 doadores  |
+
+### Technical Notes
+
+#### Resend API Learnings
+- **Daily limit**: Free tier has daily send limits; campaign split across 2 days
+- **Scheduled sends**: `scheduledAt` must be a future date; adjusted to immediate send when time passed
+- **BCC strategy**: Using BCC for mass sends ensures privacy compliance
+- **Email ID tracking**: `ac8cffba-d555-4ffd-a870-962a090baf08` (12 pending batch)
+
+#### Files Created/Modified
+
+**New Files:**
+- `emails/VozDoDoador.jsx` - Main survey invitation email
+- `emails/VozDoDoadorLembrete.jsx` - Reminder template
+- `src/utils/sendVozDoDoador.js` - Main send script
+- `src/utils/sendPending12.js` - Pending recipients script
+- `src/utils/scheduleReminders.js` - Reminder scheduler
+- `pending_emails_12.json` - Pending email list
+- `Patronos_Base_Email_Doadores_2026.csv` - Donor database
+
+**Modified Files:**
+- `src/utils/sendPending12.js` - Changed from scheduled to immediate send
+
+### Pending 12 Recipients (Sent Feb 10)
+- ricardo.a.silva-ferreira@itau-unibanco.com.br
+- ricardowang@yahoo.com.br
+- robertroders@gmail.com
+- rodolfo.d.alegre@gmail.com
+- vianna.barbosa@gmail.com
+- rodrigo.cardoso@mercadolivre.com
+- rgouvea17@gmail.com
+- rhussne@gmail.com
+- rodrigozanettimorelli@gmail.com
+- serginhoiq@yahoo.com.br
+- silvana@ciandt.com
+- stefani.sagawa@gmail.com
+
+### Next Steps
+
+1. **Execute reminder scheduling**: Run `scheduleReminders.js` to queue 4 reminder emails
+2. **Monitor survey responses**: Track Tally form submissions
+3. **Adjust reminders**: May reduce frequency if response rate is high
+
+---
+
+**Session End**: Voz do Doador 2026 campaign successfully deployed to 216 donors. Main survey invitation sent in two batches (204 + 12). Reminder templates and scheduling scripts ready for execution.
