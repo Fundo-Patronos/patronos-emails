@@ -777,3 +777,164 @@ Production send scheduled for all attendees:
 ---
 
 **Session End**: Voz do Doador 2026 campaign successfully deployed to 216 donors. Main survey invitation sent in two batches (204 + 12). Reminder templates and scheduling scripts ready for execution.
+
+---
+
+## Session 6 - February 16, 2026: Lembrete 1 - Voz do Doador
+
+### Context
+- Sending first reminder for Voz do Doador 2026 survey
+- Original schedule was Feb 14, sending 2 days late on Feb 16
+
+### Environment Setup
+- **API Key Location**: `.env` file in project root (not committed - in .gitignore)
+- **Key format**: `RESEND_API_KEY=re_xxxxx`
+- **Note**: For future sessions, the API key is stored locally in `.env`
+
+### Actions Taken
+
+#### 1. Environment Configuration
+- ✅ Created `.env` file with Resend API key
+- ✅ Verified `.env` is in `.gitignore` (safe from public commits)
+- ✅ Exported email template: `npx email export`
+
+#### 2. Send Script Created
+- ✅ Created `src/utils/sendLembrete1.js` for immediate sending
+- ✅ Configuration:
+  - From: Fundo Patronos <contato@patronos.org>
+  - Subject: "Fundo Patronos - Lembrete: Pesquisa Voz do Doador 2026"
+  - CC: gustavo.beltrami@patronos.org, lucas.yuhara@patronos.org
+  - Template: VozDoDoadorLembrete.html (7.11 KB)
+
+#### 3. Lembrete 1 Deployment
+- ✅ **Sent**: 188 donors (4 batches of 47)
+- ⚠️ **Pending**: 31 donors (hit daily quota limit)
+- ✅ Saved pending list to `pending_lembrete1_28.json`
+
+**Batch Results:**
+| Batch | Recipients | Status | Email ID |
+|-------|------------|--------|----------|
+| 1/5   | 47         | ✅ Sent | de222537-d01e-4019-aa4d-10f25533bacb |
+| 2/5   | 47         | ✅ Sent | f55dd99a-db3a-44bc-9f02-ce4e2da0c645 |
+| 3/5   | 47         | ✅ Sent | 66a74b79-e805-4288-80c3-4d27278de0f5 |
+| 4/5   | 47         | ✅ Sent | f4e9079e-beba-49a2-8fef-4ebc980610cd |
+| 5/5   | 28         | ❌ Quota | - |
+
+### Pending Recipients (31 emails)
+Saved to `pending_lembrete1_28.json` - send tomorrow when quota resets:
+- ricardovbotelho@gmail.com through wchang1993@gmail.com
+
+### Updated Campaign Schedule
+
+| Data  | Ação              | Status       | Enviados | Pendentes |
+|-------|-------------------|--------------|----------|-----------|
+| 09/02 | Envio inicial     | ✅ Enviado   | 204      | -         |
+| 10/02 | 12 pendentes      | ✅ Enviado   | 12       | -         |
+| 16/02 | Lembrete 1        | ⚠️ Parcial  | 188      | 31        |
+| 17/02 | Lembrete 1 resto  | ⏳ Pendente  | -        | 31        |
+| 19/02 | Lembrete 2        | ⏳ Pendente  | 216      | -         |
+| 24/02 | Lembrete 3        | ⏳ Pendente  | 216      | -         |
+| 01/03 | Lembrete 4        | ⏳ Pendente  | 216      | -         |
+
+### Files Created
+- `.env` - Resend API key (local only, not committed)
+- `src/utils/sendLembrete1.js` - Lembrete 1 send script
+- `pending_lembrete1_28.json` - List of 31 pending recipients
+
+---
+
+**Session End**: Lembrete 1 sent to 188/216 donors. Remaining 31 recipients saved for tomorrow due to Resend daily quota limit. API key stored in local `.env` file.
+
+---
+
+## Session 7 - February 18, 2026: Lembrete 1 Completion
+
+### Context
+- Completing Lembrete 1 by sending to the 31 pending recipients who didn't receive on Feb 16 due to Resend daily quota limit
+
+### Actions Taken
+
+#### 1. Sent Pending Lembrete 1 Emails
+- ✅ **Sent**: 31 donors from `pending_lembrete1_28.json`
+- ✅ **Email ID**: `28df6fff-f4f2-47cf-ade8-114d928be79e`
+- ✅ **Template**: VozDoDoadorLembrete.html (7.11 KB)
+- ✅ **Subject**: "Fundo Patronos - Lembrete: Pesquisa Voz do Doador 2026"
+
+### Lembrete 1 Complete
+All 216 donors have now received the first reminder:
+- 188 sent on Feb 16
+- 31 sent on Feb 18 (today)
+
+### Updated Campaign Schedule
+
+| Data  | Ação              | Status       | Enviados |
+|-------|-------------------|--------------|----------|
+| 09/02 | Envio inicial     | ✅ Enviado   | 204      |
+| 10/02 | 12 pendentes      | ✅ Enviado   | 12       |
+| 16/02 | Lembrete 1        | ✅ Enviado   | 188      |
+| 18/02 | Lembrete 1 resto  | ✅ Enviado   | 31       |
+| 19/02 | Lembrete 2        | ⏳ Pendente  | 216      |
+| 24/02 | Lembrete 3        | ⏳ Pendente  | 216      |
+| 01/03 | Lembrete 4        | ⏳ Pendente  | 216      |
+
+---
+
+**Session End**: Lembrete 1 completed. All 216 donors have received the first survey reminder.
+
+---
+
+## Session 8 - February 23, 2026: Lembrete 2 Completion
+
+### Context
+- Completing Lembrete 2 by sending to the 28 pending recipients who didn't receive it on Feb 22 due to Resend daily quota limit
+
+### Actions Taken
+
+#### 1. Sent Pending Lembrete 2 Emails
+- ✅ **Sent**: 28 donors from `pending_lembrete2.json`
+- ✅ **Email ID**: `c6a89acb-853d-47a9-bab0-b4b1f22a6a2c`
+- ✅ **Template**: VozDoDoadorLembrete.html (7.11 KB)
+- ✅ **Subject**: "Fundo Patronos - Lembrete: Pesquisa Voz do Doador 2026"
+
+### Lembrete 2 Complete
+All 216 donors have now received the second reminder:
+- 188 sent on Feb 22
+- 28 sent on Feb 23 (today)
+
+### Updated Campaign Schedule
+
+| Data  | Ação              | Status       | Enviados |
+|-------|-------------------|--------------|----------|
+| 09/02 | Envio inicial     | ✅ Enviado   | 204      |
+| 10/02 | 12 pendentes      | ✅ Enviado   | 12       |
+| 16/02 | Lembrete 1        | ✅ Enviado   | 188      |
+| 18/02 | Lembrete 1 resto  | ✅ Enviado   | 31       |
+| 22/02 | Lembrete 2        | ✅ Enviado   | 188      |
+| 23/02 | Lembrete 2 resto  | ✅ Enviado   | 28       |
+| 24/02 | Lembrete 3        | ⏳ Pendente  | 216      |
+| 01/03 | Lembrete 4        | ⏳ Pendente  | 216      |
+
+### Files Created
+- `src/utils/sendLembrete2Pending.js` - Script to send pending Lembrete 2 emails
+
+### Files Cleanup
+Removed temporary pending email lists (no longer needed):
+- ✅ Deleted `pending_lembrete1_28.json` - Lembrete 1 complete
+- ✅ Deleted `pending_lembrete2.json` - Lembrete 2 complete
+
+### Utility Scripts Reference
+Scripts in `src/utils/` for the Voz do Doador campaign:
+- `sendVozDoDoador.js` - Initial campaign send (204 donors)
+- `sendPending12.js` - Initial 12 pending donors
+- `sendLembrete1.js` - Lembrete 1 full send
+- `sendLembrete1Pending.js` - Lembrete 1 pending 31
+- `sendLembrete2.js` - Lembrete 2 full send
+- `sendLembrete2Pending.js` - Lembrete 2 pending 28
+
+### Next Actions
+- **Feb 24**: Send Lembrete 3 (can reuse `sendLembrete2.js` pattern)
+- **Mar 1**: Send Lembrete 4 (final reminder)
+
+---
+
+**Session End**: Lembrete 2 completed. All 216 donors have received the second survey reminder. Cleaned up temporary pending JSON files.
