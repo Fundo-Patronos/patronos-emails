@@ -58,7 +58,7 @@ export default function JantarExecutivos8Edicao() {
               É com grande satisfação que o Fundo Patrimonial Patronos convida você para a 8ª Edição do Jantar de Executivos, reunindo líderes, empreendedores e alumni da Unicamp em uma noite de conexões estratégicas e visões de futuro.
             </Text>
             <Text style={{ marginTop: '16px', marginBottom: '0', fontSize: '16px', color: brand.colors.text.secondary, lineHeight: '28px', textAlign: 'justify'}}>
-              Esta edição contará com a presença especial do <strong style={{ color: brand.colors.text.primary }}>Prof. Anderson Rocha</strong>, um dos cientistas mais influentes do mundo segundo o ranking de Stanford (top 2%). Anderson trará uma visão única sobre o futuro da Inteligência Artificial e seu impacto estratégico para o Brasil.
+              Esta edição contará com a presença especial do <strong style={{ color: brand.colors.text.primary }}>Prof. Anderson Rocha</strong>, um dos cientistas mais influentes do mundo segundo o ranking de Stanford (top 2%). Anderson compartilhará os avanços da pesquisa em Inteligência Artificial na Unicamp e as próximas tendências que irão transformar o setor.
             </Text>
           </Section>
 
@@ -74,7 +74,7 @@ export default function JantarExecutivos8Edicao() {
               Destaques da Edição
             </Heading>
 
-            <table width="100%" cellPadding="0" cellSpacing="0" style={{ marginBottom: '16px' }}>
+            <table width="100%" cellPadding="0" cellSpacing="0">
               <tbody>
                 <tr>
                   <td style={{ width: '80px', verticalAlign: 'top', paddingRight: '12px' }}>
@@ -103,63 +103,6 @@ export default function JantarExecutivos8Edicao() {
               </tbody>
             </table>
 
-            <table width="100%" cellPadding="0" cellSpacing="0" style={{ marginBottom: '16px' }}>
-              <tbody>
-                <tr>
-                  <td style={{ width: '80px', verticalAlign: 'top', paddingRight: '12px' }}>
-                    <Img
-                      src="https://prefeitura.rio/wp-content/uploads/2021/10/Cristo-DePaula2-2.jpg"
-                      alt="Brasil como líder global"
-                      width="72"
-                      height="72"
-                      style={{
-                        width: '72px',
-                        height: '72px',
-                        borderRadius: '50%',
-                        objectFit: 'cover',
-                        display: 'block',
-                      }}
-                    />
-                  </td>
-                  <td style={{ fontSize: '16px', color: brand.colors.text.secondary, lineHeight: '28px', verticalAlign: 'top' }}>
-                    <strong style={{ color: brand.colors.gradient.stops.orange }}>Brasil como Líder Global</strong>
-                    <br />
-                    <span style={{ fontSize: '13px', color: brand.colors.text.light, lineHeight: '20px' }}>
-                      Como a Inteligência Artificial pode impulsionar o nosso país a se tornar líder global em diversas áreas estratégicas.
-                    </span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-
-            <table width="100%" cellPadding="0" cellSpacing="0">
-              <tbody>
-                <tr>
-                  <td style={{ width: '80px', verticalAlign: 'top', paddingRight: '12px' }}>
-                    <Img
-                      src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/04/Fachada-Unicamp.jpg"
-                      alt="Unicamp"
-                      width="72"
-                      height="72"
-                      style={{
-                        width: '72px',
-                        height: '72px',
-                        borderRadius: '50%',
-                        objectFit: 'cover',
-                        display: 'block',
-                      }}
-                    />
-                  </td>
-                  <td style={{ fontSize: '16px', color: brand.colors.text.secondary, lineHeight: '28px', verticalAlign: 'top' }}>
-                    <strong style={{ color: brand.colors.gradient.stops.orange }}>O Papel da Unicamp</strong>
-                    <br />
-                    <span style={{ fontSize: '13px', color: brand.colors.text.light, lineHeight: '20px' }}>
-                      Como a Unicamp e as universidades brasileiras estão se posicionando na vanguarda da pesquisa e inovação para liderar a transformação tecnológica do país.
-                    </span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
           </Section>
 
           <Hr className="border-gray-200 my-[32px]" />
