@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "email dev",
-    "export": "email export",
+    "dev": "react-email dev",
+    "export": "react-email export",
     "send": "node src/utils/sendEmail.js"
   },
   "keywords": [
