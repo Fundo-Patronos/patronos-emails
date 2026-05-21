@@ -136,7 +136,7 @@ export default function JantarExecutivos9Edicao() {
                     Quando:
                   </td>
                   <td style={{ fontSize: '16px', color: brand.colors.text.secondary, lineHeight: '28px' }}>
-                    25 de junho de 2026, Quinta-feira
+                    02 de julho de 2026, Quinta-feira
                   </td>
                 </tr>
               </tbody>
